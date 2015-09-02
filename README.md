@@ -1,8 +1,8 @@
 # chef-pa11y
 
-Chef cookbook for the pa11y dashboard
+Chef cookbook for the [pa11y](http://github.com/nature/pa11y-dashboard) dashboard
 
-# Run tests
+## Run tests
 
 ```
 bundle exec rake
