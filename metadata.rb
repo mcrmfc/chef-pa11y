@@ -1,0 +1,12 @@
+name             'pa11y'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures pa11y'
+long_description 'Installs/Configures pa11y'
+version          '0.1.0'
+
+depends 'nodejs'
+depends 'mongodb3'
+depends 'git'
+depends 'phantomjs'
