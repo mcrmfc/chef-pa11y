@@ -79,7 +79,7 @@ template '/usr/local/pa11y-dashboard/config/production.json' do
 end
 
 template '/etc/init.d/pa11y' do
-  source 'rhel_initd.erb'
+  source "#{node['platform_family']}_initd.erb"
   mode '0755'
   variables(
     name: 'pa11y',

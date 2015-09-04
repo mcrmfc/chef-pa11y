@@ -3,6 +3,7 @@ require_relative 'spec_helper'
 
 describe 'pa11y::default' do
   let(:chef_run) { ChefSpec::SoloRunner.converge(described_recipe) }
+  let(:node) { chef_run.node }
 
   it 'includes the nodejs::npm recipe' do
     expect(chef_run).to include_recipe('nodejs::npm')
@@ -44,5 +45,17 @@ describe 'pa11y::default' do
 
   it 'creates pa11y service' do
     expect(chef_run).to enable_service('pa11y')
+  end
+
+  it 'provides the correct platform dependent path for nodejs' do
+    expect(node['pa11y']['linux']['node']).to eq '/bin/node'
+  end
+
+  context 'debian' do
+    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '14.04').converge(described_recipe) }
+    let(:node) { chef_run.node }
+    it 'provides the correct platform dependent path for nodejs' do
+      expect(node['pa11y']['linux']['node']).to eq '/usr/bin/node'
+    end
   end
 end

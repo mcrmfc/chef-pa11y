@@ -9,4 +9,4 @@ bundle exec rake
 ```
 
 Note this cookbook is in active development and currently has only been tested
-on a Vagrant centos instance.
+on a Vagrant Centos 7 and Ubuntu 14.04  instance.
