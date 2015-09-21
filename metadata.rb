@@ -7,6 +7,6 @@ long_description 'Installs/Configures pa11y'
 version          '0.1.1'
 
 depends 'nodejs'
-depends 'mongodb3', '~> 2.0.0'
+depends 'mongodb'
 depends 'git'
 depends 'phantomjs'

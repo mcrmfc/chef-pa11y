@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'mongodb3'
+include_recipe 'mongodb::default'
 include_recipe 'nodejs'
 include_recipe 'git'
 include_recipe 'phantomjs::default'
@@ -21,11 +21,9 @@ user 'pa11y' do
   comment 'pa11y user'
   home '/home/pa11y'
   shell '/bin/bash'
-  password 'pa11y'
 end
 
 group 'pa11y' do
-  action :create
   members 'pa11y'
   append true
 end
