@@ -4,7 +4,7 @@ maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
 description      'Installs/Configures pa11y'
 long_description 'Installs/Configures pa11y'
-version          '0.1.1'
+version          '0.2.1'
 
 depends 'nodejs'
 depends 'mongodb'
