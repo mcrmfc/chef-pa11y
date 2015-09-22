@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'mongodb::default'
+include_recipe 'hipsnip-mongodb::mongod'
 include_recipe 'nodejs'
 include_recipe 'git'
 include_recipe 'phantomjs::default'
