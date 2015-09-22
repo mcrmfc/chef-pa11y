@@ -91,6 +91,6 @@ end
 
 service 'pa11y' do
   supports restart: true, reload: true, status: true
-  action [:enable]
+  action [:enable, :start]
 end
 
