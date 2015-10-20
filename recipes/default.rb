@@ -54,7 +54,8 @@ template '/usr/local/pa11y-dashboard/config/development.json' do
   mode '0755'
   variables(
     dash_port: node['pa11y']['dashboard_port'],
-    service_port: node['pa11y']['webservice_port']
+    service_port: node['pa11y']['webservice_port'],
+    readonly: node['pa11y']['readonly']
   )
 end
 
@@ -63,7 +64,8 @@ template '/usr/local/pa11y-dashboard/config/test.json' do
   mode '0755'
   variables(
     dash_port: node['pa11y']['dashboard_port'],
-    service_port: node['pa11y']['webservice_port']
+    service_port: node['pa11y']['webservice_port'],
+    readonly: node['pa11y']['readonly']
   )
 end
 
@@ -72,7 +74,8 @@ template '/usr/local/pa11y-dashboard/config/production.json' do
   mode '0755'
   variables(
     dash_port: node['pa11y']['dashboard_port'],
-    service_port: node['pa11y']['webservice_port']
+    service_port: node['pa11y']['webservice_port'],
+    readonly: node['pa11y']['readonly']
   )
 end
 
